@@ -34,6 +34,14 @@ dependencies {
     // DataBase
     runtimeOnly 'com.h2database:h2'
 
+    // Flyway
+    implementation 'org.flywaydb:flyway-core'
+
+    // Util
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'com.fasterxml.uuid:java-uuid-generator:4.3.0'
+
+
 }
 
 tasks.named('test') {
