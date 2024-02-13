@@ -1,4 +1,4 @@
-package com.example.ddd.domain;
+package com.example.ddd.domain.auditEntity;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;

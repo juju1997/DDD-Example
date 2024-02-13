@@ -1,0 +1,53 @@
+### Insert Root
+POST http://localhost:8080/api/v1/root
+Content-Type: application/json
+
+{
+  "rootFieldOne": "TEST1",
+  "rootFieldTwo": "TEST2",
+  "rootFieldThree": 12,
+  "subList": [
+    {
+      "subFieldOne": "STEST1",
+      "subFieldTwo": "STEST2",
+      "subFieldThree": 12
+    }
+    ,{
+      "subFieldOne": "STEST1",
+      "subFieldTwo": "STEST2",
+      "subFieldThree": 33
+    }
+  ]
+}
+
+### Insert Sub
+POST http://localhost:8080/api/v1/root/add-sub
+Content-Type: application/json
+
+{
+  "rootToken": "root_018da367-e9c2-7f65-a21a-5d70989f940d",
+  "subFieldOne": "SUBINSERT1",
+  "subFieldTwo": "SUBINSERT2",
+  "subFieldThree": 333
+}
+
+### Disable Root
+POST http://localhost:8080/api/v1/root/disable-root
+Content-Type: application/json
+
+{
+  "rootToken": "root_018da359-34f2-7683-a348-faf9d006b27d"
+}
+
+### Disable Sub
+POST http://localhost:8080/api/v1/root/disable-sub
+Content-Type: application/json
+
+{
+  "rootToken": "root_018da35c-66e0-77c2-b4d9-343d6bd34416",
+  "subToken": "sub_018da35c-66f3-7a16-95f5-b1133e57380e"
+}
+
+### Select
+GET http://localhost:8080/api/v1/root/root_018da367-e9c2-7f65-a21a-5d70989f940d
+Content-Type: application/json
